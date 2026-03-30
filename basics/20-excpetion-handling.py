@@ -17,6 +17,8 @@
 # finally:
 #     print("i am always")
 
+# Example 1:
+
 try:
     print("Begning")
     city="Pune"
@@ -47,3 +49,21 @@ else:
     print("Success Message")
 finally:
     print("Finally, always executes...")
+
+# Example 2:
+try:
+    file = open("text.txt")
+    print(file.read())
+except FileNotFoundError as err:
+    print("File not found", err)
+
+except Exception as err:
+    print("Unexpected Error", err)
+
+else:
+    print("file opened succesfully")
+    
+finally:
+    print("Execuation completed")
+    if file is not None:
+        file.close()
